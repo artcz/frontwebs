@@ -1,0 +1,169 @@
+<html>
+  <body>
+    <style type="text/css">
+      body {
+        font-family: sans-serif;
+        font-size: .9em;
+      }
+
+      .board {
+        margin: 2em auto;
+        height: 44em;
+        width: 44em;
+        padding: 1em 1em 2em;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .row {
+        width: 2em;
+        float: left;
+        display: cell;
+        text-align: center;
+        line-height: 5em;
+      }
+
+      .cell {
+        width: 5em;
+        height: 5em;
+        float: left;
+        color: transparent;
+        text-align: center;
+
+      }
+
+      .cell:hover {
+        color: black;
+      }
+
+      .cell.white {
+        background: #eaf3cf;
+      }
+
+      .cell.black {
+        background: #6ca053;
+      }
+
+      .column {
+        width: 5em;
+        height: 2em;
+        padding-top: .5em;
+        float: left;
+        text-align: center;
+      }
+
+      .column.A { margin-left: 2em; }
+
+      hr { clear: both; border: 0;}
+
+    </style>
+    <div class="board">
+      <div class="column A">A</div>
+      <div class="column B">B</div>
+      <div class="column C">C</div>
+      <div class="column D">D</div>
+      <div class="column E">E</div>
+      <div class="column F">F</div>
+      <div class="column G">G</div>
+      <div class="column H">H</div>
+      <hr />
+
+      <div class="row R8">8</div>
+      <div class="cell CA R8 white" data-cell="A8">A8</div>
+      <div class="cell CB R8 black" data-cell="B8">B8</div>
+      <div class="cell CC R8 white" data-cell="C8">C8</div>
+      <div class="cell CD R8 black" data-cell="D8">D8</div>
+      <div class="cell CE R8 white" data-cell="E8">E8</div>
+      <div class="cell CF R8 black" data-cell="F8">F8</div>
+      <div class="cell CG R8 white" data-cell="G8">G8</div>
+      <div class="cell CH R8 black" data-cell="H8">H8</div>
+      <div class="row R8">8</div>
+
+      <div class="row R7">7</div>
+      <div class="cell CA R7 black">A7</div>
+      <div class="cell CB R7 white">B7</div>
+      <div class="cell CC R7 black">C7</div>
+      <div class="cell CD R7 white">D7</div>
+      <div class="cell CE R7 black">E7</div>
+      <div class="cell CF R7 white">F7</div>
+      <div class="cell CG R7 black">G7</div>
+      <div class="cell CH R7 white">H7</div>
+      <div class="row R7">7</div>
+
+      <div class="row R6">6</div>
+      <div class="cell CA R6 white">A6</div>
+      <div class="cell CB R6 black">B6</div>
+      <div class="cell CC R6 white">C6</div>
+      <div class="cell CD R6 black">D6</div>
+      <div class="cell CE R6 white">E6</div>
+      <div class="cell CF R6 black">F6</div>
+      <div class="cell CG R6 white">G6</div>
+      <div class="cell CH R6 black">H6</div>
+      <div class="row R6">6</div>
+
+      <div class="row R5">5</div>
+      <div class="cell CA R5 black">A5</div>
+      <div class="cell CB R5 white">B5</div>
+      <div class="cell CC R5 black">C5</div>
+      <div class="cell CD R5 white">D5</div>
+      <div class="cell CE R5 black">E5</div>
+      <div class="cell CF R5 white">F5</div>
+      <div class="cell CG R5 black">G5</div>
+      <div class="cell CH R5 white">H5</div>
+      <div class="row R5">5</div>
+
+      <div class="row R4">4</div>
+      <div class="cell CA R4 white">A4</div>
+      <div class="cell CB R4 black">B4</div>
+      <div class="cell CC R4 white">C4</div>
+      <div class="cell CD R4 black">D4</div>
+      <div class="cell CE R4 white">E4</div>
+      <div class="cell CF R4 black">F4</div>
+      <div class="cell CG R4 white">G4</div>
+      <div class="cell CH R4 black">H4</div>
+      <div class="row R4">4</div>
+
+      <div class="row R3">3</div>
+      <div class="cell CA R3 black">A3</div>
+      <div class="cell CB R3 white">B3</div>
+      <div class="cell CC R3 black">C3</div>
+      <div class="cell CD R3 white">D3</div>
+      <div class="cell CE R3 black">E3</div>
+      <div class="cell CF R3 white">F3</div>
+      <div class="cell CG R3 black">G3</div>
+      <div class="cell CH R3 white">H3</div>
+      <div class="row R3">3</div>
+
+      <div class="row R2">2</div>
+      <div class="cell CA R2 white">A2</div>
+      <div class="cell CB R2 black">B2</div>
+      <div class="cell CC R2 white">C2</div>
+      <div class="cell CD R2 black">D2</div>
+      <div class="cell CE R2 white">E2</div>
+      <div class="cell CF R2 black">F2</div>
+      <div class="cell CG R2 white">G2</div>
+      <div class="cell CH R2 black">H2</div>
+      <div class="row R2">2</div>
+
+      <div class="row R1">1</div>
+      <div class="cell CA R1 black">A1</div>
+      <div class="cell CB R1 white">B1</div>
+      <div class="cell CC R1 black">C1</div>
+      <div class="cell CD R1 white">D1</div>
+      <div class="cell CE R1 black">E1</div>
+      <div class="cell CF R1 white">F1</div>
+      <div class="cell CG R1 black">G1</div>
+      <div class="cell CH R1 white">H1</div>
+      <div class="row R1">1</div>
+
+      <div class="column A">A</div>
+      <div class="column B">B</div>
+      <div class="column C">C</div>
+      <div class="column D">D</div>
+      <div class="column E">E</div>
+      <div class="column F">F</div>
+      <div class="column G">G</div>
+      <div class="column H">H</div>
+
+    </div>
+  </body>
+</html>
