@@ -1,0 +1,49 @@
+<style type="text/css">
+
+  body { text-align: center; }
+
+  #calendar circle {
+    fill: #def;
+  }
+</style>
+
+
+<h1>2017-11-30</h1>
+<div id="calendar"></div>
+
+
+<script type="text/javascript" src="/d3.v4.min.js"></script>
+<script type="text/javascript">
+
+  var svg = d3.select('svg'), circle;
+  var padding = 50;
+
+  var Calendar = (function(window, d3) {
+
+    init();
+    update();
+
+    function init() {
+      svg = d3.select('#calendar').append('svg')
+        .attr('width', '100%')
+        .attr('height', '100%');
+      circle = svg.append('circle');
+    }
+
+    function update() {
+      circle
+        .attr('cx', function(d) { return window.innerWidth / 2})
+        .attr('cy', function(d) { return window.innerHeight / 2})
+        .attr('r', function(d) {
+          return Math.min(window.innerHeight / 2, window.innerWidth / 2) - padding
+        })
+    }
+
+    return {update: update};
+
+  })(window, d3);
+
+  window.addEventListener('resize', Calendar.update);
+
+
+</script>
